@@ -1,2 +1,2 @@
 # SWIP
-Scientific Workflow with Pegasus (SWIP) issue tracking (no source code).
+Scientific Workflow Integrity with Pegasus (SWIP) issue tracking (no source code).
