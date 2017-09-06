@@ -3,3 +3,6 @@ This repo is for the [Scientific Workflow Integrity with Pegasus](https://cacr.i
 
 News:
 August, 3 2017: Our [Community Use Case Document](https://github.com/IU-CACR/SWIP/blob/master/SWIP-Community-Use-Cases.pdf) is now available.
+
+SWIP presentations:
+* Ilya Baldin, Ewa Deelman and Von Welch. Scientific Workflow Integrity with Pegasus. IU Booth Talk at SC16, November 2016. https://dx.doi.org/10.6084/m9.figshare.4282499
