@@ -1,0 +1,58 @@
+Running this:
+$ python parseSCARF.py scarf-Bandit-4.8beta3.xml 1 1 1
+
+will produce this output:
+
+flags =  1 1 1
+
+---- scarf-Bandit-4.8beta3.xml:
+AnalyzerReport
+{'platform_name': 'ubuntu-16.04-64', 'build_root_dir': '/home/builder/build', 'package_version': '4.8.0beta3', 'parser_fw': 'resultparser', 'assessment_start_ts': '1503595449.7361057', 'parser_fw_version': '3.1.1', 'uuid': '6bd923a0-89e4-4e12-a8a3-922dbd9f0d42', 'tool_name': 'bandit', 'package_root_dir': 'pkg1', 'package_name': 'pegasus-python-source', 'tool_version': '1.3.0'}
+
+================== High priority
+Line 84   in  pkg1/Pegasus/init.py  ==>  By default, jinja2 sets autoescape to False. Consider using autoescape=True to mitigate XSS vulnerabilities.
+Line 135  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 234  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 262  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 283  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 327  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 391  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 397  in  pkg1/Pegasus/jupyter/instance.py  ==>  subprocess call with shell=True identified, security issue.
+Line 80   in  pkg1/setup.py  ==>  subprocess call with shell=True identified, security issue.
+
+----- Got  9  high priority vulnerabilities.
+
+
+================== Medium priority
+Line 260  in  pkg1/Pegasus/monitoring/notifications.py  ==>  Probable insecure usage of temp file/directory.
+Line 261  in  pkg1/Pegasus/monitoring/notifications.py  ==>  Probable insecure usage of temp file/directory.
+Line 95   in  pkg1/Pegasus/service/monitoring/views.py  ==>  Use of insecure MD2, MD4, or MD5 hash function.
+
+----- Got  3  medium priority vulnerabilities.
+
+
+================== Low priority
+Line 1843 in  pkg1/Pegasus/DAX3.py  ==>  Try, Except, Pass detected.
+Line 1950 in  pkg1/Pegasus/DAX3.py  ==>  Using xml.etree.cElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.cElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.
+Line 1953 in  pkg1/Pegasus/DAX3.py  ==>  Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.
+Line 78   in  pkg1/Pegasus/init.py  ==>  Try, Except, Pass detected.
+Line 249  in  pkg1/Pegasus/init.py  ==>  Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+Line 35   in  pkg1/Pegasus/jupyter/instance.py  ==>  Consider possible security implications associated with subprocess module.
+Line 30   in  pkg1/Pegasus/monitoring/notifications.py  ==>  Consider possible security implications associated with subprocess module.
+Line 117  in  pkg1/Pegasus/monitoring/notifications.py  ==>  Try, Except, Pass detected.
+Line 279  in  pkg1/Pegasus/monitoring/notifications.py  ==>  Try, Except, Pass detected.
+Line 286  in  pkg1/Pegasus/monitoring/notifications.py  ==>  subprocess call - check for execution of untrusted input.
+Line 498  in  pkg1/Pegasus/monitoring/notifications.py  ==>  Try, Except, Pass detected.
+Line 725  in  pkg1/Pegasus/monitoring/notifications.py  ==>  Try, Except, Pass detected.
+Line 3    in  pkg1/Pegasus/service/ensembles/views.py  ==>  Consider possible security implications associated with subprocess module.
+Line 179  in  pkg1/Pegasus/service/ensembles/views.py  ==>  subprocess call - check for execution of untrusted input.
+Line 179  in  pkg1/Pegasus/service/ensembles/views.py  ==>  Starting a process with a partial executable path
+Line 59   in  pkg1/Pegasus/service/monitoring/serializer.py  ==>  Try, Except, Pass detected.
+Line 3    in  pkg1/setup.py  ==>  Consider possible security implications associated with subprocess module.
+Line 68   in  pkg1/setup.py  ==>  subprocess call - check for execution of untrusted input.
+Line 68   in  pkg1/setup.py  ==>  Starting a process with a partial executable path
+Line 71   in  pkg1/setup.py  ==>  subprocess call - check for execution of untrusted input.
+Line 71   in  pkg1/setup.py  ==>  Starting a process with a partial executable path
+
+----- Got  21  low priority vulnerabilities.
+
