@@ -19,8 +19,13 @@ All SWIP-related files will be the focus of our attention for static analysis fo
 ## Getting started with SWAMP
 
 To get started with SWAMP, ```Sign Up``` for an account at [www.mir-swamp.org](https://www.mir-swamp.org/). You can sign 
-up using a personal account, or use your existing GitHub, Google, or university account. Once you have an account and login,
-a typical workflow involves: uploading your code package, run an assessment (using one or more provided assessment tools), and
-view the results of the assessment.
+up using a personal account, or use your existing GitHub, Google, or university account. Once you have an account and 
+you are logged in,
+a typical workflow involves: 
+* uploading your code package, 
+* run an assessment (using one or more SWAMP-provided tools for the code/language), and
+* view the results of the assessment.
+
+Below is a screenshot of (Web UI) output from SWAMP after running an assessment on a sample Python project, ```test_swamp1```. Note that 3 (Python-related) tools (2nd column in table) were used to assess this package and each generated quite different results (last column): Bandit reported 0 warnings, Flake8 reported 117, and Pylint reported 1.
 
 ![alt text](https://github.com/IU-CACR/SWIP/blob/master/static_analysis/images/swamp_assessment1.png "Example assessment in SWAMP")
