@@ -23,4 +23,4 @@ up using a personal account, or use your existing GitHub, Google, or university 
 a typical workflow involves: uploading your code package, run an assessment (using one or more provided assessment tools), and
 view the results of the assessment.
 
-![alt text](https://github.com/IU-CACR/SWIP/blob/master/static_anlysis/images/swamp_assessment1.png "Example assessment in SWAMP")
+![alt text](https://github.com/IU-CACR/SWIP/blob/master/static_analysis/images/swamp_assessment1.png "Example assessment in SWAMP")
