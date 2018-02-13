@@ -29,3 +29,5 @@ a typical workflow involves:
 Below is a screenshot of (Web UI) output from SWAMP after running an assessment on a sample Python project, ```test_swamp1```. Note that 3 (Python-related) tools (2nd column in table) were used to assess this package and each generated quite different results (last column): Bandit reported 0 warnings, Flake8 reported 117, and Pylint reported 1.
 
 ![alt text](https://github.com/IU-CACR/SWIP/blob/master/static_analysis/images/swamp_assessment1.png "Example assessment in SWAMP")
+
+The [Pegasus User Guide](https://pegasus.isi.edu/documentation/pegasus-user-guide.pdf) describes some of the new tools introduced for the SWIP project, e.g., ```pegasus-integrity```.
