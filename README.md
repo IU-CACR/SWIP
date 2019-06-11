@@ -4,6 +4,9 @@ This repo is for the [Scientific Workflow Integrity with Pegasus](https://cacr.i
 News:
 August, 3 2017: Our [Community Use Case Document](https://github.com/IU-CACR/SWIP/blob/master/SWIP-Community-Use-Cases.pdf) is now available.
 
+Our experiences paper:
+* Mats Rynge, Karan Vahi, Ewa Deelman, Anirban Mandal, Ilya Baldin, Omkar Bhide, Randy Heiland, Von Welch, Raquel Hill, William L. Poehlman, and F. Alex Feltus. 2019. Integrity Protection for Scientific Workflow Data: Motiva- tion and Initial Experiences. In Practice and Experience in Advanced Research Computing (PEARC ’19), July 28-August 1, 2019, Chicago, IL, USA. ACM, New York, NY, USA (to appear) [Pre-publication version](Integrity_Protection_for_Scientific_Workfow_Data.pdf)
+
 SWIP presentations:
 * Software Integrity with Pegasus: Securing Scientific Workflow Data. Presentations at IU, USC, and RENCI Booths at SC17, November 14-15, 2017.
 
