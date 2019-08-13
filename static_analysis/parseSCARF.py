@@ -9,7 +9,7 @@ file_name = 'scarf-Bandit-4.8beta3-orig.xml'
 if (len(sys.argv) < 2):
   print("Usage: %s <scarf.xml> [High_Fatal_flag  Medium_Error_flag  Low_Warning_flag]")
   print("e.g.,")
-  print("python scarf-Bandit-4.9.xml  1  1  0")
+  print("python parseSCARF.py scarf-Bandit-4.9.xml  1  1  0")
   exit(0)
 
 file_name = sys.argv[1]
