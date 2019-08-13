@@ -31,3 +31,35 @@ Below is a screenshot of (Web UI) output from SWAMP after running an assessment 
 ![alt text](https://github.com/IU-CACR/SWIP/blob/master/static_analysis/images/swamp_assessment1.png "Example assessment in SWAMP")
 
 The [Pegasus User Guide](https://pegasus.isi.edu/documentation/pegasus-user-guide.pdf) describes some of the new tools introduced for the SWIP project, e.g., ```pegasus-integrity```.
+
+## Manually parsing SCARF
+
+We use the  `parseSCARF.py` script to manually parse a SCARF file (from SWAMP assessment tools for Python code) and report high, medium, and low vulnerabilities, for example:
+
+```
+$ python parseSCARF.py scarf-Bandit.xml 1 1 0
+flags = 1 1 0
+
+---- scarf-Bandit.xml:
+AnalyzerReport
+{'tool_name': 'bandit', 'platform_name': 'ubuntu-16.04-64', 'package_version': 'unknown', 'assessment_start_ts': '1522088324.7147691', 'uuid': '3d076660-4a05-49cc-aec7-331a209c49d9', 'parser_fw_version': '3.1.4', 'package_name': 'pegasus_bin_4.9.0dev', 'tool_version': '1.3.0', 'parser_fw': 'resultparser', 'build_root_dir': '/home/builder/build', 'package_root_dir': 'pkg1'}
+
+================== High priority
+Line 27 in pkg1/pegasus-db-admin.py ==> subprocess call with shell=True identified, security issue.
+Line 29 in pkg1/pegasus-db-admin.py ==> subprocess call with shell=True identified, security issue.
+Line 9 in pkg1/pegasus-em.py ==> subprocess call with shell=True identified, security issue.
+Line 11 in pkg1/pegasus-em.py ==> subprocess call with shell=True identified, security issue.
+Line 32 in pkg1/pegasus-exitcode.py ==> subprocess call with shell=True identified, security issue.
+Line 11 in pkg1/pegasus-globus-online-init.py ==> subprocess call with shell=True identified, security issue.
+Line 13 in pkg1/pegasus-globus-online-init.py ==> subprocess call with shell=True identified, security issue.
+Line 9 in pkg1/pegasus-service.py ==> subprocess call with shell=True identified, security issue.
+Line 11 in pkg1/pegasus-service.py ==> subprocess call with shell=True identified, security issue.
+Line 9 in pkg1/pegasus-submitdir.py ==> subprocess call with shell=True identified, security issue.
+Line 11 in pkg1/pegasus-submitdir.py ==> subprocess call with shell=True identified, security issue.
+
+----- Got 11 high priority vulnerabilities.
+
+================== Medium priority
+
+----- Got 0 medium priority vulnerabilities.
+```
