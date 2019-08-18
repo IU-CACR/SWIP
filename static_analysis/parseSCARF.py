@@ -9,7 +9,7 @@ file_name = 'scarf-Bandit-4.8beta3-orig.xml'
 if (len(sys.argv) < 2):
   print("Usage: %s <scarf.xml> [High_Fatal_flag  Medium_Error_flag  Low_Warning_flag]")
   print("e.g.,")
-  print("python parseSCARF.py scarf-Bandit-4.9.xml  1  1  0")
+  print("python scarf-Bandit-4.9.xml  1  1  0")
   exit(0)
 
 file_name = sys.argv[1]
@@ -31,10 +31,14 @@ print(root.attrib)
 
 """-------------------------
 Note that each static analysis tool uses different
-classifications/adjectives for vulnerabilities:
+classifications/adjectives for vulnerabilities (search for <BugSeverity> in the .xml):
 
+Python:
 Bandit uses: LOW | MEDIUM | HIGH
 Flake8 use:  WARNING | ERROR | FATAL
+
+Java:
+PMD:  1 (most severe) - 5 (least)      (rf. https://maven.apache.org/plugins/maven-pmd-plugin/check-mojo.html#failurePriority)
 
 https://docs.pylint.org/en/1.6.0/tutorial.html
   There are 5 kind of message types :
@@ -83,13 +87,13 @@ for severity in [1,0,-1]:
       elif (child2.tag == 'BugSeverity'):
         bug_severity = 0    # -1, 0, 1 = low, medium, high (equiv in different tools)
 
-        # TODO: use case-insensitive string comparison
+        # We map the tool's severity scale to our own:
         # -1, 0, 1 = low, medium, high (equiv in different tools)
-        if((child2.text == "HIGH") or (child2.text == "Fatal")):
+        if((child2.text.lower() == "high") or (child2.text.lower() == "fatal") or (child2.text=="1") or (child2.text=="2") ):
           bug_severity = 1
-        elif((child2.text == "MEDIUM") or (child2.text == "Error")):
+        elif((child2.text.lower() == "medium") or (child2.text.lower() == "error") or (child2.text=="3") ):
           bug_severity = 0
-        elif((child2.text == "LOW") or (child2.text == "Warning")):
+        elif((child2.text.lower() == "low") or (child2.text.lower() == "warning") or (child2.text=="4") or (child2.text=="5") ):
           bug_severity = -1
 
       elif (child2.tag == 'BugMessage'):
