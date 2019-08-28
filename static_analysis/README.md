@@ -1,5 +1,7 @@
 # Guide to SWIP Static Analysis 
 
+See http://hdl.handle.net/2022/23413 for the SWIP software assurance Guide.
+
 ## Overview
 
 The Scientific Workflow Integrity with Pegasus ([SWIP](https://cacr.iu.edu/projects/swip/index.php)) project improves the security and integrity of 
