@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AnalyzerReport assessment_start_ts="1566820441.3618631" uuid="20b6b05c-8af7-4e21-a323-02fa3163612d" build_root_dir="/home/builder/build" tool_name="bandit" platform_name="ubuntu-16.04-64" parser_fw_version="3.1.8" package_root_dir="pkg1" package_version="1.0" tool_version="1.3.0" package_name="bin470" parser_fw="resultparser">
+  <BugInstance id="0">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/parseSCARF.py</SourceFile>
+        <StartLine>6</StartLine>
+        <EndLine>7</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="1">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/parseSCARF.py</SourceFile>
+        <StartLine>26</StartLine>
+        <EndLine>26</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="2">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>38</StartLine>
+        <EndLine>38</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="3">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>47</StartLine>
+        <EndLine>47</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="4">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>49</StartLine>
+        <EndLine>49</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="5">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>177</StartLine>
+        <EndLine>177</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_tmp_directory</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Probable insecure usage of temp file/directory.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="6">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>338</StartLine>
+        <EndLine>338</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>set_bad_file_permissions</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Chmod setting a permissive mask 0755 on file (debug_wrapper).</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="7">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>681</StartLine>
+        <EndLine>681</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_a_shell</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Starting a process with a shell, possible injection detected, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="8">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>847</StartLine>
+        <EndLine>847</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="9">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>898</StartLine>
+        <EndLine>899</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="10">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>1284</StartLine>
+        <EndLine>1284</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="11">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-analyzer.py</SourceFile>
+        <StartLine>1465</StartLine>
+        <EndLine>1465</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>set_bad_file_permissions</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Chmod setting a permissive mask 0755 on file (debug_script_name).</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="12">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>33</StartLine>
+        <EndLine>33</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="13">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>59</StartLine>
+        <EndLine>59</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="14">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>60</StartLine>
+        <EndLine>60</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="15">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>93</StartLine>
+        <EndLine>96</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="16">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>117</StartLine>
+        <EndLine>120</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="17">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>136</StartLine>
+        <EndLine>136</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="18">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-dagman.py</SourceFile>
+        <StartLine>176</StartLine>
+        <EndLine>176</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="19">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-db-admin.py</SourceFile>
+        <StartLine>21</StartLine>
+        <EndLine>21</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="20">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-db-admin.py</SourceFile>
+        <StartLine>27</StartLine>
+        <EndLine>27</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="21">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-db-admin.py</SourceFile>
+        <StartLine>29</StartLine>
+        <EndLine>29</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="22">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-em.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="23">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-em.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>9</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="24">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-em.py</SourceFile>
+        <StartLine>11</StartLine>
+        <EndLine>11</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="25">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-exitcode.py</SourceFile>
+        <StartLine>27</StartLine>
+        <EndLine>29</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="26">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-exitcode.py</SourceFile>
+        <StartLine>32</StartLine>
+        <EndLine>32</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="27">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-globus-online.py</SourceFile>
+        <StartLine>30</StartLine>
+        <EndLine>30</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="28">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-globus-online.py</SourceFile>
+        <StartLine>42</StartLine>
+        <EndLine>42</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="29">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-globus-online.py</SourceFile>
+        <StartLine>44</StartLine>
+        <EndLine>44</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="30">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-globus-online.py</SourceFile>
+        <StartLine>171</StartLine>
+        <EndLine>171</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="31">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-graphviz.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>4</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Using xml.sax.handler to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.handler with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="32">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-graphviz.py</SourceFile>
+        <StartLine>5</StartLine>
+        <EndLine>5</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Using xml.sax to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="33">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-graphviz.py</SourceFile>
+        <StartLine>223</StartLine>
+        <EndLine>223</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="34">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-init.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="35">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-init.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>11</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>exec_used</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Use of exec detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="36">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-init.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>9</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="37">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-metadata.py</SourceFile>
+        <StartLine>25</StartLine>
+        <EndLine>26</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="38">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-metadata.py</SourceFile>
+        <StartLine>36</StartLine>
+        <EndLine>36</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="39">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-metadata.py</SourceFile>
+        <StartLine>38</StartLine>
+        <EndLine>38</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="40">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-monitord.py</SourceFile>
+        <StartLine>39</StartLine>
+        <EndLine>41</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="41">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-monitord.py</SourceFile>
+        <StartLine>47</StartLine>
+        <EndLine>49</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>exec_used</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Use of exec detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="42">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-monitord.py</SourceFile>
+        <StartLine>47</StartLine>
+        <EndLine>47</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="43">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>9</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="44">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>20</StartLine>
+        <EndLine>20</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="45">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>22</StartLine>
+        <EndLine>22</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="46">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>114</StartLine>
+        <EndLine>114</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_a_shell</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Starting a process with a shell, possible injection detected, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="47">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>129</StartLine>
+        <EndLine>129</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_a_shell</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Starting a process with a shell, possible injection detected, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="48">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>158</StartLine>
+        <EndLine>158</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_a_shell</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Starting a process with a shell, possible injection detected, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="49">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-plots.py</SourceFile>
+        <StartLine>174</StartLine>
+        <EndLine>174</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_a_shell</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Starting a process with a shell, possible injection detected, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="50">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-s3.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>5</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="51">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-s3.py</SourceFile>
+        <StartLine>8</StartLine>
+        <EndLine>8</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="52">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-s3.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>9</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="53">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-service.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="54">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-service.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>9</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="55">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-service.py</SourceFile>
+        <StartLine>11</StartLine>
+        <EndLine>11</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="56">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-statistics.py</SourceFile>
+        <StartLine>7</StartLine>
+        <EndLine>7</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="57">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-statistics.py</SourceFile>
+        <StartLine>16</StartLine>
+        <EndLine>16</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="58">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-statistics.py</SourceFile>
+        <StartLine>18</StartLine>
+        <EndLine>18</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="59">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-submitdir.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="60">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-submitdir.py</SourceFile>
+        <StartLine>9</StartLine>
+        <EndLine>9</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="61">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-submitdir.py</SourceFile>
+        <StartLine>11</StartLine>
+        <EndLine>11</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="62">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>40</StartLine>
+        <EndLine>40</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="63">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>46</StartLine>
+        <EndLine>47</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with STDOUT module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="64">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>279</StartLine>
+        <EndLine>279</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Standard pseudo-random generators are not suitable for security/cryptographic purposes.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="65">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>289</StartLine>
+        <EndLine>289</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Standard pseudo-random generators are not suitable for security/cryptographic purposes.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="66">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>532</StartLine>
+        <EndLine>534</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="67">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>557</StartLine>
+        <EndLine>557</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="68">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>560</StartLine>
+        <EndLine>560</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="69">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>1321</StartLine>
+        <EndLine>1321</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="70">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>1413</StartLine>
+        <EndLine>1413</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="71">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>1717</StartLine>
+        <EndLine>1717</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="72">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>2122</StartLine>
+        <EndLine>2122</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="73">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>2455</StartLine>
+        <EndLine>2455</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="74">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>2671</StartLine>
+        <EndLine>2671</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="75">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>2891</StartLine>
+        <EndLine>2891</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="76">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>2974</StartLine>
+        <EndLine>2974</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="77">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>2979</StartLine>
+        <EndLine>2979</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="78">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3073</StartLine>
+        <EndLine>3074</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="79">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3116</StartLine>
+        <EndLine>3116</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="80">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3172</StartLine>
+        <EndLine>3172</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="81">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3302</StartLine>
+        <EndLine>3303</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="82">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3431</StartLine>
+        <EndLine>3431</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="83">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3718</StartLine>
+        <EndLine>3718</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="84">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/bin/pegasus-transfer.py</SourceFile>
+        <StartLine>3771</StartLine>
+        <EndLine>3771</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Standard pseudo-random generators are not suitable for security/cryptographic purposes.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugSummary>
+    <BugCategory group="UNKOWN" code="assert_used" count="1" bytes="620" />
+    <BugCategory group="UNKOWN" code="blacklist" count="26" bytes="16144" />
+    <BugCategory group="UNKOWN" code="exec_used" count="2" bytes="1079" />
+    <BugCategory group="UNKOWN" code="hardcoded_tmp_directory" count="1" bytes="583" />
+    <BugCategory group="UNKOWN" code="set_bad_file_permissions" count="2" bytes="1203" />
+    <BugCategory group="UNKOWN" code="start_process_with_a_shell" count="5" bytes="3062" />
+    <BugCategory group="UNKOWN" code="subprocess_popen_with_shell_equals_true" count="27" bytes="16412" />
+    <BugCategory group="UNKOWN" code="subprocess_without_shell_equals_true" count="7" bytes="4192" />
+    <BugCategory group="UNKOWN" code="try_except_pass" count="14" bytes="7767" />
+  </BugSummary>
+</AnalyzerReport>

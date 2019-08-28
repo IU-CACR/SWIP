@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AnalyzerReport platform_name="ubuntu-16.04-64" build_root_dir="/home/builder/build" package_version="4.8.0beta3" parser_fw="resultparser" assessment_start_ts="1503595449.7361057" parser_fw_version="3.1.1" uuid="6bd923a0-89e4-4e12-a8a3-922dbd9f0d42" tool_name="bandit" package_root_dir="pkg1" package_name="pegasus-python-source" tool_version="1.3.0">
+  <BugInstance id="0">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/DAX3.py</SourceFile>
+        <StartLine>1843</StartLine>
+        <EndLine>1843</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="1">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/DAX3.py</SourceFile>
+        <StartLine>1950</StartLine>
+        <EndLine>1950</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Using xml.etree.cElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.cElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="2">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/DAX3.py</SourceFile>
+        <StartLine>1953</StartLine>
+        <EndLine>1953</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="3">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/init.py</SourceFile>
+        <StartLine>78</StartLine>
+        <EndLine>78</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="4">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/init.py</SourceFile>
+        <StartLine>84</StartLine>
+        <EndLine>84</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>jinja2_autoescape_false</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>By default, jinja2 sets autoescape to False. Consider using autoescape=True to mitigate XSS vulnerabilities.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="5">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/init.py</SourceFile>
+        <StartLine>249</StartLine>
+        <EndLine>249</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="6">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>35</StartLine>
+        <EndLine>35</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="7">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>135</StartLine>
+        <EndLine>135</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="8">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>234</StartLine>
+        <EndLine>235</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="9">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>262</StartLine>
+        <EndLine>262</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="10">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>283</StartLine>
+        <EndLine>283</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="11">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>327</StartLine>
+        <EndLine>327</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="12">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>391</StartLine>
+        <EndLine>391</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="13">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/jupyter/instance.py</SourceFile>
+        <StartLine>397</StartLine>
+        <EndLine>397</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="14">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>30</StartLine>
+        <EndLine>31</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="15">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>117</StartLine>
+        <EndLine>117</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="16">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>260</StartLine>
+        <EndLine>260</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_tmp_directory</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Probable insecure usage of temp file/directory.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="17">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>261</StartLine>
+        <EndLine>261</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_tmp_directory</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Probable insecure usage of temp file/directory.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="18">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>279</StartLine>
+        <EndLine>279</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="19">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>286</StartLine>
+        <EndLine>286</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="20">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>498</StartLine>
+        <EndLine>498</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="21">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/monitoring/notifications.py</SourceFile>
+        <StartLine>725</StartLine>
+        <EndLine>725</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="22">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/service/ensembles/views.py</SourceFile>
+        <StartLine>3</StartLine>
+        <EndLine>4</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="23">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/service/ensembles/views.py</SourceFile>
+        <StartLine>179</StartLine>
+        <EndLine>179</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="24">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/service/ensembles/views.py</SourceFile>
+        <StartLine>179</StartLine>
+        <EndLine>179</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="25">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/service/monitoring/serializer.py</SourceFile>
+        <StartLine>59</StartLine>
+        <EndLine>59</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="26">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/Pegasus/service/monitoring/views.py</SourceFile>
+        <StartLine>95</StartLine>
+        <EndLine>95</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Use of insecure MD2, MD4, or MD5 hash function.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="27">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/setup.py</SourceFile>
+        <StartLine>3</StartLine>
+        <EndLine>3</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="28">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/setup.py</SourceFile>
+        <StartLine>68</StartLine>
+        <EndLine>68</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="29">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/setup.py</SourceFile>
+        <StartLine>68</StartLine>
+        <EndLine>68</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="30">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/setup.py</SourceFile>
+        <StartLine>71</StartLine>
+        <EndLine>71</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="31">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/setup.py</SourceFile>
+        <StartLine>71</StartLine>
+        <EndLine>71</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="32">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/setup.py</SourceFile>
+        <StartLine>80</StartLine>
+        <EndLine>80</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugSummary>
+    <BugCategory group="UNKOWN" code="assert_used" count="1" bytes="629" />
+    <BugCategory group="UNKOWN" code="blacklist" count="7" bytes="4559" />
+    <BugCategory group="UNKOWN" code="hardcoded_tmp_directory" count="2" bytes="1232" />
+    <BugCategory group="UNKOWN" code="jinja2_autoescape_false" count="1" bytes="652" />
+    <BugCategory group="UNKOWN" code="start_process_with_partial_path" count="3" bytes="1810" />
+    <BugCategory group="UNKOWN" code="subprocess_popen_with_shell_equals_true" count="8" bytes="5048" />
+    <BugCategory group="UNKOWN" code="subprocess_without_shell_equals_true" count="4" bytes="2485" />
+    <BugCategory group="UNKOWN" code="try_except_pass" count="7" bytes="4056" />
+  </BugSummary>
+</AnalyzerReport>
